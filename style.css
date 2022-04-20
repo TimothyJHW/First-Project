@@ -12,6 +12,10 @@
 
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
 
 * { 
     margin:0;
@@ -41,9 +45,6 @@ img {
 
 body {
     height: 100vh;
-    overflow:scroll;
-    scroll-snap-type: y mandatory;
-    scroll-behavior: smooth;
 }
 
 #phone-nav {
@@ -86,14 +87,16 @@ nav li a {
     width:100vw;
     background-image: url(Assets/ralph-mayhew-QkQ-rE_1sh8-unsplash.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-repeat: no-repeat;
     position: relative;
 }
 
 #page-1 aside {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow', sans-serif;
-    letter-spacing: .075rem;
+    font-family: 'Henny Penny', cursive;
+    font-weight:900;
+    opacity: 0.8;
+    letter-spacing: .5rem;
     position: absolute;
     color: white;
     right:0rem;
@@ -131,6 +134,7 @@ nav li a {
     background-color: black;
     /* width: vw; */
     height: 100vh;
+    opacity: 0.4;
 }
 
 
@@ -149,6 +153,7 @@ nav li a {
     gap: 2em;
     box-shadow: .5rem .5rem 1rem rgb(73, 73, 73);
     background-image:linear-gradient(to bottom right, slategray,lightgray);
+    text-align: center;
 
 }
 .card h3 {
@@ -164,8 +169,15 @@ nav li a {
 .card-image {
     background: white;
     width:100%;
-    /* overflow:hidden; */
+    transition: 1s;
+    z-index:1;
+}
 
+.card-image:hover {
+
+    transform: scale(2);
+    border: 5px solid white;
+    z-index:2;
 }
 
 /* .explanation {
@@ -186,6 +198,7 @@ nav li a {
     display:grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding-bottom:2rem;
 
 
 }
@@ -258,10 +271,15 @@ nav li a {
     grid-column: 4/5;
     /* align-content: center;
     justify-items: center; */
+}
+
+#page-3 #buy-button {
 
 }
 
-#page-3 #buy-on-Amzn-button {
+
+
+#page-3 #Amzn-logo {
     grid-column: 5/6;
     grid-row:4/5;
 
@@ -320,8 +338,7 @@ nav li a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-
+    padding: 5%;
 }
 
 #page-4 #email-signup h1 {
@@ -466,14 +483,17 @@ left:50%; */
     }
 
     #page-1 {
-        background-position: 90% center;
-        ;
+        background-position: top right;
+    }
+    #page-1 aside {
+        line-height: 3rem;
     }
 
     #page-2 {
         min-height:100vh;
         display:flex;
         background-color: black;
+        padding:4rem;
         /* background-image: url(Assets/sugar\ lips.jpg);
         background-position: bottom center;
         background-repeat: no-repeat;
@@ -498,31 +518,12 @@ left:50%; */
     #page-3 #social-media-bar {
         padding: 1.5rem;
     }
+
+    .fa-amazon {
+        font-size: 5rem;
+    }
+    }
         
   
 
     }
-
-
-
-
-        .burger {
-            width: 40px;
-            height: 30px;
-            float:right;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            margin-top: 1rem;
-            margin-right: 1rem;
-        }
-
-        .burger > div {
-            background-color:white;
-            height:3px;
-        }
-
-         #burger-link {
-            background-color: red;
-            
-        } 
