@@ -11,12 +11,12 @@
     --cardcolor: slategray;
     --tshirtcolor1: #6d96f6;
     --tshirtcolor2: #e05e5e;
-
 }
 
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    /*Removes scroll bars */
     /* overflow: hidden; */
 }
 
@@ -25,20 +25,12 @@ html {
     padding:0;
     box-sizing: border-box;
     font-family: 'poppins', sans-serif;
-    letter-spacing: .20rem;
 }
 
 
 img {
     display:block;
     width:100%;
-}
-
-    video {
-        /* height:100%; */
-        width:100%;
-        display:block;
-        object-position: center center;
 }
 
 
@@ -137,29 +129,18 @@ nav li a {
 
 #page-2 {
     min-height:100vh;
-    background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(121,124,198,1) 24%, rgba(158,162,223,1) 50%, rgba(186,191,242,1) 68%, rgba(242,162,185,1) 100%, rgba(0,212,255,1) 100%, rgba(8,40,142,1) 100%);
+    /* background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(121,124,198,1) 24%, rgba(158,162,223,1) 50%, rgba(186,191,242,1) 68%, rgba(242,162,185,1) 100%, rgba(0,212,255,1) 100%, rgba(8,40,142,1) 100%); */
+    background-color:rgb(41, 40, 40);
+    position: relative;
 }
 
 
 #card-area {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
-    flex-wrap:wrap;
-    height:100%;
+    flex-wrap: wrap;
     padding:10%;
-    margin:0 auto;
-}
-
-
-#image-area {
-    background-image: url(assets/sugar\ lips.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: repeat; 
-    background-color: black;
-    height: 100vh;
-    opacity: 0.4;
 }
 
 /* Styling the card */
@@ -167,7 +148,8 @@ nav li a {
 .card {
     max-width: var(--cardwidth);
     min-height:var(--cardheight);
-    border-radius: 1%;
+    color:white;
+    border-radius: 3%;
     border: 1px solid white;
     display: flex;
     flex-direction: column;
@@ -175,29 +157,37 @@ nav li a {
     gap: 2em;
     box-shadow: .5rem .5rem 1rem rgb(73, 73, 73);
     text-align: center;
-    margin: 2rem;
-
 }
+
 .card h3 {
     padding:1rem;
-
 }
+
 .card-text {
     padding:1rem;
 }
 
 .card-image {
-    background: white;
+    padding: 0 1rem;
     width:100%;
     transition: 1s;
     z-index:1;
 }
 
 .card-image:hover {
-
     transform: scale(1.5);
-    border: 5px solid white;
     z-index:2;
+}
+
+footer {
+    color:white;
+    background-color: gray;
+    text-align:center;
+    padding: 2rem;
+    letter-spacing: .3rem;
+    position:absolute;
+    width:100%;
+    bottom:0;
 }
 
 
@@ -209,8 +199,7 @@ nav li a {
 #page-3 {
     min-height:100vh;
     width: 100vw;
-    position:relative;
-    padding-bottom:2rem;
+    position: relative;
 }
 
 
@@ -222,128 +211,79 @@ nav li a {
     background-position: center;
     background-repeat: no-repeat;
     height:40vh;
-    /* grid-row: 1 /3;
-    grid-column: 1/7; */
 }
 
 #product-wrapper {
-    max-width:800px;
+    max-width:900px;
+    position:relative;
+    top:-2rem;
     width:100%;
     margin:0 auto;
-    display:flex;
+    display:grid;
+    grid-template-columns: 4fr 2fr 1fr;
 }
 
 #t-shirt-image {
-    /* width:30vw;
-    position:relative;
-    left:0;
-    margin:-5%; */
-
+    grid-column: 1;
 }
 
-#product-content {
+/* #product-content {
+    grid-column:2;
+} */
+
+#product-description {
     display:flex;
     flex-direction: column;
+    font-family: raleway, sans-serif;
+    font-size:.75rem;
+    color:black;
+    align-items:center;
+    justify-content: space-between;
+    }
+
+#headline{
+    margin-top: 4rem;
 }
 
-/* 
-#page-3 #headline {
-
-    grid-column: 4 /6;
-    grid-row: 3 /4;
-    color:black;
-    font-family:raleway ,sans-serif;
-    } */
+#product-details li {
+    list-style: none;
+    }
 
 #product-details {
     width:100%;
-}
-
-
-#product-description {
-    font-family: raleway, sans-serif;
-    font-size:.75rem;
-    /* grid-column: 4 /5;
-    grid-row: 3 /6; */
-    color:black;
-    Margin:1rem;
-
-    }
-
-    #product-description li {
-        list-style: none;
-        /* line-height: 2rem; */
-    }
-
-    #buttons    {
-        display:flex;
-        flex-direction:column;
-        justify-content:flex-end;
-        width:100%;
     }
     
 
-/* #page-3 #t-shirt-image {
-    width:30vw;
-    min-height:40vh; 
-    background-color: gray;
-    position: relative;
-    top:-10vh;
-    left: 30vh;
-    background-image: url(Assets/t\ shirt.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-} */
-
-/* #product-content {
-    display:flex;
-
-} */
-
 #t-shirt-image {
-
-   /* width:100%;
-    /* background-image: url(Assets/t\ shirt.png);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat; */
-    object-fit: contain;
+    object-fit: cover;
     object-position: center center;
 }
 
 #buy-button {
-
-    grid-row: 5/6;
-    grid-column: 4/5;
-    /* align-content: center;
-    justify-items: center; */
+    align-self:flex-start;
+    width: 90%;
 }
 
-#buy-button {
-
-
+#buttons {
+    grid-column: 3;
+    align-self:end;
 }
-
-
 
 #Amzn-logo {
-
-
+    /* the parent div in the grid has align-self, but this is just to center the icon within the parent so text-align */
+    text-align: center;
 }
-
 /* height max-content set on flex-box, otherwise the individual SM icons stretch to fit grid element and can be activated off-icon */
 
 #social-media-bar {
     display: flex;
     height:max-content;
     gap: .5rem;
-    grid-column: 5/6;
-    grid-row: 5/6;
+    grid-column:4;
 }
 
 #social-media-bar a {
     text-decoration: none;
-
 }
 
 #social-media-bar a:visited {   
@@ -374,6 +314,7 @@ nav li a {
     align-items: center;
 }
 
+
 #page-4 #email-signup {
     min-width:30vw;
     min-height:30vh;
@@ -393,6 +334,9 @@ nav li a {
     margin: 1rem 0 0 0;
 }
 
+input {
+    padding:.5rem;
+}
 
 
 #first-name {
@@ -408,8 +352,8 @@ nav li a {
     align-items: baseline;
     padding:5% 0;
     flex-wrap:wrap
-
 }
+
 
 #email {
     display:flex;
@@ -418,39 +362,31 @@ nav li a {
     justify-content:baseline;
     padding: 0 0 5% 0;
     flex-wrap:wrap;
-
 }
 
 
 .button {
-    border-radius: 16px;
-     border: 1px; */
+    border-radius: 20px;
+    border: 1px;
     border-color: white;
     background-color: palevioletred;
-    height: 2rem;
-    width:max-content;
+    text-align:center;
+    padding:.5rem;
 }
 
 .button a {
-    border-radius: 20px;
+    /* border-radius: 20px; */
     border: 1px;
-    background-color: palevioletred;
     color: white;
     font-family: poppins, sans-serif;
     font-size: 1rem;
     text-decoration: none;
-    padding: .5rem;
     text-align: center;
-    margin:auto;
-    position:relative;
-    top:.5rem;
 }
 
 
 #page-4 #email-signup-btn {
     margin:auto;
-/* position:relative;
-left:50%; */
 }
 
 
@@ -464,14 +400,12 @@ left:50%; */
 
     .fa-twitter, .fa-pinterest, .fa-whatsapp, .fa-facebook, .fa-instagram  {
         font-size: 2rem;
-
     }
 
     /* Social media colors */
 
     .fa-twitter {
         color:#55acee;
-
     }
 
     .fa-facebook {
@@ -500,6 +434,10 @@ left:50%; */
     .desktop-nav {
           display:none;
     }
+
+    footer {
+        display:none;
+    }
         
     #phone-nav {
     padding-top: 1rem;
@@ -510,7 +448,7 @@ left:50%; */
     background-color: rgb(0 0 0);
     z-index: 999;
     height:10vw; 
-}
+    }
 
     #phone-nav > * {
         color: white;
@@ -555,18 +493,20 @@ left:50%; */
 
     #banner-image {
         display:none;
-    }
+        }
+
     #product-wrapper {
         flex-direction:column;
-    }
+        }
 
     #page-3 #product-description {
         text-align: center;
         margin:0;
-    }
+        }
+
     #page-3 #product-description p {
      display: none;
-}
+    }
 
     #page-3 #social-media-bar {
         padding: 1.5rem;
