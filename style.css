@@ -25,13 +25,10 @@ html {
     font-family: 'poppins', sans-serif;
 }
 
-
 img {
     display:block;
     width:100%;
 }
-
-
 
 /* 2.  Each page is 100vh */
 
@@ -43,14 +40,12 @@ body {
     display:none;
 }
 
-
 .desktop-nav {
     position: fixed;
     width: 100%;
     background-color: rgb(0 0 0);
     opacity:.75;
     z-index: 999;
-
 }
 
 .desktop-nav  > *{
@@ -62,16 +57,12 @@ body {
     padding: 1.5rem;
 }
 
-
-
 nav li a {
     text-decoration: none;
     color: white;
     font-size: 1.25rem;
     letter-spacing: .3rem;
 }
-
-
 
 #page-1 {
     min-height:100vh;
@@ -95,7 +86,6 @@ nav li a {
     color: slategray;
 }
 
-
 #page-1 article a  {
     background:none;
     border: 2px solid white;
@@ -104,7 +94,6 @@ nav li a {
     padding:.70rem;
     transition:ease-in .15s;
 }
-
 
 #page-1 article a:hover {
     background:white;
@@ -122,7 +111,6 @@ nav li a {
 }
 
 
-
 /* Page 2 */
 
 #page-2 {
@@ -131,7 +119,6 @@ nav li a {
     background-color:rgb(41, 40, 40);
     position: relative;
 }
-
 
 #card-area {
     display: flex;
@@ -189,16 +176,13 @@ footer {
 
 
 
-
 /* Page 3 Styling */
-
 
 #page-3 {
     min-height:100vh;
     width: 100vw;
     position: relative;
 }
-
 
 #banner-image {
     background-image: url(assets/spoonful\ of\ sugar.jpg);
@@ -224,7 +208,6 @@ footer {
     grid-column: 1;
 }
 
-
 #product-description {
     display:flex;
     flex-direction: column;
@@ -247,7 +230,6 @@ footer {
     width:100%;
     }
     
-
 #t-shirt-image {
     object-fit: cover;
     object-position: center center;
@@ -267,6 +249,7 @@ footer {
     /* the parent div in the grid has align-self, but this is just to center the icon within the parent so text-align */
     text-align: center;
 }
+
 /* height max-content set on flex-box, otherwise the individual SM icons stretch to fit grid element and can be activated off-icon */
 
 #social-media-bar {
@@ -292,7 +275,6 @@ footer {
 
 
 /* Page 4 Styling */
-
 
 #page-4 {
     min-height:100vh;
@@ -329,7 +311,6 @@ input {
     padding:.5rem;
 }
 
-
 #first-name {
     display:flex;
     gap: 1rem;
@@ -345,7 +326,6 @@ input {
     flex-wrap:wrap
 }
 
-
 #email {
     display:flex;
     gap: 1rem;
@@ -354,7 +334,6 @@ input {
     padding: 0 0 5% 0;
     flex-wrap:wrap;
 }
-
 
 .button {
     border-radius: 20px;
@@ -375,13 +354,11 @@ input {
     text-align: center;
 }
 
-
 #page-4 #email-signup-btn {
     margin:auto;
 }
 
 /* font awesome  */
-
 
     .fa-amazon {
         font-size: 10rem;
@@ -421,13 +398,13 @@ input {
     @media only screen and (max-width: 600px) {
 
     html {
-            scroll-behavior: smooth;
-            scroll-snap-type: y mandatory;
-            overflow: auto;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        overflow: auto;
     }
 
     .desktop-nav {
-          display:none;
+        display:none;
     }
 
     footer {
@@ -435,13 +412,13 @@ input {
     }
         
     #phone-nav {
-    padding: 1rem;
-    display:flex;
-    justify-content: space-around;
-    position: fixed;
-    width: 100%;
-    background-color: rgb(0 0 0);
-    z-index: 999;
+        padding: 1rem;
+        display:flex;
+        justify-content: space-around;
+        position: fixed;
+        width: 100%;
+        background-color: rgb(0 0 0);
+        z-index: 999;
     }
 
     #phone-nav > * {
@@ -480,7 +457,6 @@ input {
     .card {
         margin-top:1rem;
     }
-
 
     #page-3 {
         display:flex;
