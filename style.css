@@ -67,7 +67,7 @@ nav li a {
 #page-1 {
     min-height:100vh;
     width:100vw;
-    background-image: url(Assets/cover\ t\ shirt.png);
+    background-image: url(assets/cover_t_shirt.png);
     background-size: cover;
     background-position: top right;
     background-repeat: no-repeat;
@@ -115,7 +115,6 @@ nav li a {
 
 #page-2 {
     min-height:100vh;
-    /* background: linear-gradient(90deg, rgba(9,9,121,1) 0%, rgba(121,124,198,1) 24%, rgba(158,162,223,1) 50%, rgba(186,191,242,1) 68%, rgba(242,162,185,1) 100%, rgba(0,212,255,1) 100%, rgba(8,40,142,1) 100%); */
     background-color:rgb(41, 40, 40);
     position: relative;
 }
@@ -185,7 +184,7 @@ footer {
 }
 
 #banner-image {
-    background-image: url(assets/spoonful\ of\ sugar.jpg);
+    background-image: url(assets/spoonful_of_sugar.jpg);
     width: 100%;
     background-color: black;
     background-size:cover;
@@ -278,7 +277,7 @@ footer {
 
 #page-4 {
     min-height:100vh;
-    background-image: url(Assets/page-4\ image.png) ;
+    background-image: url(assets/page_4_image.png) ;
     background-size:cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -345,7 +344,6 @@ input {
 }
 
 .button a {
-    /* border-radius: 20px; */
     border: 1px;
     color: white;
     font-family: poppins, sans-serif;
@@ -434,7 +432,7 @@ input {
         background-position: center center;
         min-height:100vh;
         width:100vw;
-        background-image: url(assets/cover\ t\ shirt\ mobile.png);
+        background-image: url(assets/cover_t_shirt_mobile.png);
         background-size: cover;
         background-repeat: no-repeat;
         position: relative;
