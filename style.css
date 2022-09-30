@@ -269,7 +269,7 @@ footer {
 
 #social-media-bar a:hover {
     color: red;
-    box-shadow:1rem, 1rem, rgb(73, 73, 73);
+    box-shadow: 1rem 1rem rgb(73, 73, 73);
 }
 
 
@@ -329,7 +329,6 @@ input {
     display:flex;
     gap: 1rem;
     align-items: baseline;
-    justify-content:baseline;
     padding: 0 0 5% 0;
     flex-wrap:wrap;
 }
